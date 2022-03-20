@@ -1,5 +1,5 @@
 # Desain Logo
 
 Logo berasal dari dua icon yang saya dapatkan di Internet yaitu:
-[![Gambar dari PNG Repo](watering-can-water-pngrepo-com.png)](https://www.pngrepo.com/svg/270541/watering-can-water "Website Download Logo 1")
-[![Gambar dari KindPNG](kindpng_1326076.png)](https://www.kindpng.com/imgv/wwbRmi_bell-reminder-icon-png-transparent-png/ "Website Download Logo 2")
+1. [<img src="watering-can-water-pngrepo-com.png" alt="Gambar dari PNG Repo" width="100"/>](https://www.pngrepo.com/svg/270541/watering-can-water "Website Download Logo 1")
+2. [<img src="kindpng_1326076.png" alt="Gambar dari KindPNG" width="100"/>](https://www.kindpng.com/imgv/wwbRmi_bell-reminder-icon-png-transparent-png/ "Website Download Logo 2")
