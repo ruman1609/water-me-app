@@ -18,6 +18,7 @@ package com.example.waterme.worker
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.work.Worker
@@ -40,7 +41,10 @@ class WaterReminderWorker(
         }
 
         val pendingIntent: PendingIntent = PendingIntent
-            .getActivity(applicationContext, 0, intent, 0)
+            .getActivity(
+                applicationContext, 0, intent,
+                if (Build.VERSION.SDK_INT < Build.VERSION_CODES.S) 0 else PendingIntent.FLAG_IMMUTABLE
+            )
 
         val plantName = inputData.getString(nameKey)
 
@@ -48,7 +52,8 @@ class WaterReminderWorker(
             .setSmallIcon(R.drawable.ic_logo_notification)
             .setContentTitle("Water me!")
             .setContentText("It's time to water your $plantName")
-            .setPriority(NotificationCompat.PRIORITY_HIGH)
+            .setDefaults(NotificationCompat.DEFAULT_SOUND or NotificationCompat.DEFAULT_VIBRATE)
+            .setPriority(NotificationCompat.PRIORITY_MAX)
             .setContentIntent(pendingIntent)
             .setAutoCancel(true)
 
