@@ -20,6 +20,8 @@ import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
 import android.os.Build
+import com.example.waterme.core.repository.Repository
+import com.example.waterme.core.room.DatabaseRoom
 
 class BaseApplication : Application() {
 
@@ -38,6 +40,9 @@ class BaseApplication : Application() {
             notificationManager.createNotificationChannel(channel)
         }
     }
+
+    fun injectRepository() =
+        Repository.getInstance(DatabaseRoom.getInstance(applicationContext).generateDao())
 
     companion object {
         const val CHANNEL_ID = "water_reminder_id"

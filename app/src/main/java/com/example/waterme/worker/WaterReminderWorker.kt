@@ -32,7 +32,7 @@ class WaterReminderWorker(
 ) : Worker(context, workerParams) {
 
     // Arbitrary id number
-    val notificationId = 17
+    private val notificationId = 17
 
     override fun doWork(): Result {
         val intent = Intent(applicationContext, MainActivity::class.java).apply {
@@ -45,7 +45,7 @@ class WaterReminderWorker(
         val plantName = inputData.getString(nameKey)
 
         val builder = NotificationCompat.Builder(applicationContext, BaseApplication.CHANNEL_ID)
-            .setSmallIcon(R.drawable.ic_android_black_24dp)
+            .setSmallIcon(R.drawable.ic_logo_notification)
             .setContentTitle("Water me!")
             .setContentText("It's time to water your $plantName")
             .setPriority(NotificationCompat.PRIORITY_HIGH)
