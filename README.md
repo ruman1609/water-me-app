@@ -7,9 +7,9 @@ codelab [Google (Water Me App)](https://developer.android.com/codelabs/basic-and
 
 Aplikasi ini terbagi menjadi 2 tampilan:
 
-1. Tampilan Beranda
+1. Tampilan Beranda  
    <img src="tampilan/home.png" alt="Tampilan home" width="200"/>
-2. Tampilan tambah/edit data
+2. Tampilan tambah/edit data  
    <img src="tampilan/edit.png" alt="Tampilan insert/edit" width="200"/>
 
 ## Data Tumbuhan
