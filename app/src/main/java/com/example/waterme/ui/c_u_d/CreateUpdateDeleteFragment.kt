@@ -96,7 +96,7 @@ class CreateUpdateDeleteFragment : Fragment() {
                     view.findViewById<RadioButton>(bind.plantSchedule.checkedRadioButtonId).text
                 val plant =
                     Plant(
-                        0, bind.plantNameET.text.toString(),
+                        if (args.isInsert) 0 else args.id, bind.plantNameET.text.toString(),
                         schedule.toString(), bind.plantTypeET.text.toString(),
                         bind.plantDescriptionET.text.toString()
                     )
